@@ -1,0 +1,12 @@
+#!/bin/bash
+
+gcc test.c -o test
+
+if [ $? -ne 0 ]; then
+	echo "[EROARE] Nu a compilat test.c"
+	exit 1
+fi
+
+echo "[SUCCES] A compilat test.c"
+rm -rf test
+exit 0
